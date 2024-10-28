@@ -1,10 +1,11 @@
 // Server handler for sending letters to Vercel
 import nodemailer from 'nodemailer'
 import dotenv from 'dotenv'
+import { VercelRequest, VercelResponse } from '@vercel/node'
 
 dotenv.config()
 
-export default async function handler(req, res) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
 	if (req.method === 'POST') {
 		const { name, email, subject, message } = req.body
 
