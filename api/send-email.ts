@@ -1,7 +1,7 @@
 // Server handler for sending letters to Vercel
-import type { VercelRequest, VercelResponse } from '@vercel/node'
 import nodemailer from 'nodemailer'
 import dotenv from 'dotenv'
+import { VercelRequest, VercelResponse } from '@vercel/node'
 
 dotenv.config()
 
@@ -13,7 +13,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 			service: 'gmail',
 			auth: {
 				user: process.env.EMAIL_USER,
-				pass: process.env.EMAIL_PASS,
+				pass: process.env.EMAIL_PASS
 			}
 		})
 
