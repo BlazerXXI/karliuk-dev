@@ -1,8 +1,8 @@
+// Server handler for sending letters to Vercel
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import nodemailer from 'nodemailer'
-
-// Server handler for sending letters to Vercel
 import dotenv from 'dotenv'
+
 dotenv.config()
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
