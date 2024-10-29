@@ -1,22 +1,21 @@
+import axios from 'axios'
 import { IContactData } from '../types'
 
-// Function for sending a request from the front -end
+// Function for sending a request from the front-end
 
 const sendEmail = async (contactData: IContactData) => {
-  try {
-    const response = await fetch('/api/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(contactData),
-    });
+	try {
+		const response = await axios.post('/api/send-email', contactData, {
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
 
-    return response.ok;
-  } catch (error) {
-    console.error('Error:', error);
-    throw new Error('Failed to send email');
-  }
-};
+		return response.status === 200
+	} catch (error) {
+		console.error('Error:', error)
+		throw new Error('Failed to send email')
+	}
+}
 
-export default sendEmail;
+export default sendEmail
