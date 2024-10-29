@@ -1,15 +1,15 @@
-import { Link, useLocation } from "react-router-dom";
-import cx from "classnames";
+import { Link } from 'react-router-dom'
+// import cx from "classnames";
 
 const Header = () => {
-	const location = useLocation();
+	// const location = useLocation();
 
 	return (
-		<header className="header fixed w-full z-10 left-1/2 transform -translate-x-1/2 top-0 flex justify-between items-center py-4 md:py-6">
-			<Link className="header__title" to="/">
+		<header className='header fixed w-full z-10 left-1/2 transform -translate-x-1/2 top-0 flex justify-between items-center py-4 md:py-6'>
+			<Link className='header__title' to='/'>
 				Ruslan Karliuk
 			</Link>
-			<nav className="header__nav flex col-span-3 gap-8">
+			<nav className='header__nav flex col-span-3 gap-8'>
 				{/* <Link
 					to="/work"
 					className={cx({ active: location.pathname === "/work" })}
@@ -30,7 +30,7 @@ const Header = () => {
 				</Link> */}
 			</nav>
 		</header>
-	);
-};
+	)
+}
 
-export default Header;
+export default Header
