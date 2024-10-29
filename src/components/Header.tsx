@@ -16,7 +16,7 @@ const Header = () => {
 				>
 					Work
 				</Link> */}
-				<Link
+				{/* <Link
 					to="/about"
 					className={cx({ active: location.pathname === "/about" })}
 				>
@@ -27,7 +27,7 @@ const Header = () => {
 					className={cx({ active: location.pathname === "/contact" })}
 				>
 					Contact
-				</Link>
+				</Link> */}
 			</nav>
 		</header>
 	);

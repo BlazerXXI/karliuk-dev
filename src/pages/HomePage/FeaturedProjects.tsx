@@ -16,14 +16,14 @@ const FeaturedProjects = () => {
 			<ul className="flex flex-col gap-12">
 				<Projects projectsData={featureProjectsData} />
 			</ul>
-			<div>
+			{/* <div>
 				<Link
 					className="primary-button py-[10px] btn-hover w-full flex justify-center items-center gap-4"
 					to="/work"
 				>
 					All works <LinkIcon />
 				</Link>
-			</div>
+			</div> */}
 		</section>
 	);
 };

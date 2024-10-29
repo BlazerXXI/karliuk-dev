@@ -1,5 +1,5 @@
 // variables
-@use "assets/variables" as vars;
+@use 'assets/variables' as vars;
 
 // tailwind style
 @tailwind base;
@@ -37,13 +37,14 @@ body {
 	padding-inline: vars.$padding-page;
 	max-width: vars.$mxw-page;
 	margin: 0 auto;
+	scroll-behavior: smooth;
 }
 
 main {
 	margin-top: vars.$header-height;
 	flex: 1;
 	> * {
-		padding-block: 80px;
+		padding-block: vars.$padding-block;
 		position: relative;
 	}
 	> *:after {
@@ -51,7 +52,7 @@ main {
 		bottom: 0;
 		left: 50%;
 		transform: translateX(-50%);
-		content: "";
+		content: '';
 		display: block;
 		height: 1px;
 		width: 100%;
@@ -67,7 +68,7 @@ main {
 }
 
 .footer {
-	padding-block: 80px;
+	padding-block: vars.$padding-block;
 	max-width: vars.$mxw-page;
 }
 
@@ -93,7 +94,7 @@ main {
 		transition: all 0.3s ease 0s;
 	}
 	a:after {
-		content: "";
+		content: '';
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -192,7 +193,7 @@ main {
 	transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
 
 	&:after {
-		content: "";
+		content: '';
 		position: absolute;
 		bottom: -4px;
 		left: 50%;
@@ -229,7 +230,8 @@ main {
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
-	input, textarea {
+	input,
+	textarea {
 		padding: 12px 16px;
 		&:focus {
 			outline: 1px solid vars.$accent-color;
@@ -249,8 +251,21 @@ main {
 	}
 	main {
 		> * {
-			padding-block: 40px;
+			padding-block: vars.$padding-block-mobile;
 		}
+	}
+	.footer {
+		padding-block: vars.$padding-block-mobile;
+		.page-paragraph,
+		.primary-link {
+			font-size: 16px;
+			line-height: 1.6;
+		}
+	}
+	.page-title__footer {
+		font-size: 43px;
+		line-height: 1;
+		letter-spacing: -0.02em;
 	}
 	.page-title {
 		font-size: 57px;

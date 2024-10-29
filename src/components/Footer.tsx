@@ -30,8 +30,12 @@ const Footer = () => {
 
 	return (
 		<>
-			<footer className='footer flex justify-between'>
-				<div className='flex flex-col gap-10 pl-[43px]'>
+			<footer
+				id='contact'
+				className='footer flex justify-between max-lg:flex-col max-lg:gap-10'
+			>
+				<div className='flex flex-col lg:justify-between lg:pl-[43px]'>
+					<div className='flex flex-col gap-6 lg:gap-10'>
 					<div className='flex flex-col gap-4'>
 						<h3 className='page-title__footer'>Let’s connect</h3>
 
@@ -79,8 +83,12 @@ const Footer = () => {
 							<SocialLink classname='w-[32px] h-auto' githubPrimary />
 						</a>
 					</div>
+					</div>
+					<p className='copyright page-paragraph max-lg:hidden'>
+						© {new Date().getFullYear()} Ruslan Karliuk
+					</p>
 				</div>
-				<div className='max-lg:w-full w-full lg:max-w-[720px]'>
+				<div className='max-lg:w-full w-full lg:max-w-[720px] max-lg:flex max-lg:flex-col max-lg:gap-10'>
 					<FormProvider {...methods}>
 						<form
 							className='flex flex-col gap-6'
@@ -120,6 +128,9 @@ const Footer = () => {
 							</Button>
 						</form>
 					</FormProvider>
+					<p className='copyright page-paragraph lg:hidden'>
+						© {new Date().getFullYear()} Ruslan Karliuk
+					</p>
 				</div>
 			</footer>
 		</>
