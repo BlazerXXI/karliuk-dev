@@ -41,19 +41,19 @@ const Hero = () => {
 					</div>
 					<div className='inline-flex items-center gap-4'>
 						<a
-							href={'https://github.com/blazerxxi'}
+							href={'https://www.linkedin.com/in/blazerxxi'}
+							aria-label='Visit my LinkedIn profile'
 							target='_blank'
 							rel='noopener noreferrer nofollow'
-							aria-label='Visit my GitHub profile'
 							className='btn-hover'
 						>
 							<SocialLink linkedin />
 						</a>
 						<a
-							href={'https://www.linkedin.com/in/blazerxxi'}
+							href={'https://github.com/blazerxxi'}
+							aria-label='Visit my GitHub profile'
 							target='_blank'
 							rel='noopener noreferrer nofollow'
-							aria-label='Visit my LinkedIn profile'
 							className='btn-hover'
 						>
 							<SocialLink github />
