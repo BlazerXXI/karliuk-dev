@@ -22,7 +22,14 @@ function App() {
 				</Routes>
 			</main>
 			<Footer />
-			<ToastContainer />
+			<ToastContainer
+				position='bottom-center'
+				theme='dark'
+				autoClose={3000}
+				hideProgressBar={true}
+				closeOnClick
+				pauseOnHover
+			/>
 			<Analytics />
 		</BrowserRouter>
 	)

@@ -6,24 +6,31 @@ import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { IContactData } from 'src/types'
 import sendEmail from 'src/api/sendEmail'
+import { useState } from 'react'
+import { BeatLoader } from 'react-spinners'
 
 const Footer = () => {
 	const methods = useForm()
+	const [sending, setSending] = useState(false)
 
 	const onSubmit = async (data: FieldValues) => {
 		const contactData = data as IContactData
 
 		try {
-			const success = await sendEmail(contactData)
+			setSending(true)
 
+			const success = await sendEmail(contactData)
 			if (success) {
 				toast.success('Message sent successfully!')
 				methods.reset()
+				setSending(false)
 			} else {
 				toast.error('Failed to send the message.')
+				setSending(false)
 			}
 		} catch (error) {
 			console.log(error)
+			setSending(false)
 			toast.error('An error occurred. Please try again later.')
 		}
 	}
@@ -36,53 +43,53 @@ const Footer = () => {
 			>
 				<div className='flex flex-col lg:justify-between lg:pl-[43px]'>
 					<div className='flex flex-col gap-6 lg:gap-10'>
-					<div className='flex flex-col gap-4'>
-						<h3 className='page-title__footer'>Let’s connect</h3>
+						<div className='flex flex-col gap-4'>
+							<h3 className='page-title__footer'>Let’s connect</h3>
 
-						<div className='[&_a]:text-white [&_a]:text-lg [&_a]:lowercase [&_a]:after:bottom-[0px] flex flex-col gap-2'>
-							<p className='page-paragraph flex items-center gap-2'>
-								Say hello at{' '}
-								<a
-									className='btn-hover primary-link'
-									href='mailto:ruslandendik@gmail.com'
-								>
-									ruslandendik@gmail.com
-								</a>
-							</p>
-							<p className='page-paragraph flex items-center gap-2'>
-								For more info, here’s my{' '}
-								<a
-									rel='noopener noreferrer nofollow'
-									target='_blank'
-									href='/resume.pdf'
-									download='Ruslan_Karliuk_Frontend_Developer.pdf'
-									className='btn-hover primary-link'
-								>
-									resume
-								</a>
-							</p>
+							<div className='[&_a]:text-white [&_a]:text-lg [&_a]:lowercase [&_a]:after:bottom-[0px] flex flex-col gap-2'>
+								<p className='page-paragraph flex items-center gap-2'>
+									Say hello at{' '}
+									<a
+										className='btn-hover primary-link'
+										href='mailto:ruslandendik@gmail.com'
+									>
+										ruslandendik@gmail.com
+									</a>
+								</p>
+								<p className='page-paragraph flex items-center gap-2'>
+									For more info, here’s my{' '}
+									<a
+										rel='noopener noreferrer nofollow'
+										target='_blank'
+										href='/resume.pdf'
+										download='Ruslan_Karliuk_Frontend_Developer.pdf'
+										className='btn-hover primary-link'
+									>
+										resume
+									</a>
+								</p>
+							</div>
 						</div>
-					</div>
-					<div className='flex gap-6'>
-						<a
-							href={'https://github.com/blazerxxi'}
-							target='_blank'
-							rel='noopener noreferrer nofollow'
-							aria-label='Visit my GitHub profile'
-							className='btn-hover'
-						>
-							<SocialLink classname='w-[32px] h-auto' linkedinPrimary />
-						</a>
-						<a
-							href={'https://www.linkedin.com/in/blazerxxi'}
-							target='_blank'
-							rel='noopener noreferrer nofollow'
-							aria-label='Visit my LinkedIn profile'
-							className='btn-hover'
-						>
-							<SocialLink classname='w-[32px] h-auto' githubPrimary />
-						</a>
-					</div>
+						<div className='flex gap-6'>
+							<a
+								href={'https://github.com/blazerxxi'}
+								target='_blank'
+								rel='noopener noreferrer nofollow'
+								aria-label='Visit my GitHub profile'
+								className='btn-hover'
+							>
+								<SocialLink classname='w-[32px] h-auto' linkedinPrimary />
+							</a>
+							<a
+								href={'https://www.linkedin.com/in/blazerxxi'}
+								target='_blank'
+								rel='noopener noreferrer nofollow'
+								aria-label='Visit my LinkedIn profile'
+								className='btn-hover'
+							>
+								<SocialLink classname='w-[32px] h-auto' githubPrimary />
+							</a>
+						</div>
 					</div>
 					<p className='copyright page-paragraph max-lg:hidden'>
 						© {new Date().getFullYear()} Ruslan Karliuk
@@ -124,7 +131,7 @@ const Footer = () => {
 								required
 							/>
 							<Button className='primary-button py-5 px-10 w-fit' type='submit'>
-								Submit
+								{!sending ? 'Submit' : <BeatLoader />}
 							</Button>
 						</form>
 					</FormProvider>
@@ -138,3 +145,4 @@ const Footer = () => {
 }
 
 export default Footer
+
