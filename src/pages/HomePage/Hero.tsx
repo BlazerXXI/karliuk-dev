@@ -7,7 +7,7 @@ const Hero = () => {
 	return (
 		<section className='hero flex max-lg:flex-col-reverse max-lg:gap-10 items-center justify-between '>
 			<div className='flex flex-col gap-8 lg:gap-10 max-lg:w-full'>
-				<div className='lg:max-w-[540px] max-lg:flex max-lg:flex-col max-lg:gap-3'>
+				<div className='lg:max-w-[540px] flex flex-col gap-2 max-lg:gap-3'>
 					<h1 className='page-title'>
 						hi, i am <br /> Ruslan Karliuk.
 					</h1>
