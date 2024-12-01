@@ -47,11 +47,11 @@ body {
 main {
 	margin-top: vars.$header-height;
 	flex: 1;
-	> * {
+	> section {
 		padding-block: vars.$padding-block;
 		position: relative;
 	}
-	> *:after {
+	> section:after {
 		position: absolute;
 		bottom: 0;
 		left: 50%;
@@ -259,6 +259,10 @@ body::before {
 	body {
 		padding-inline: vars.$padding-page-mobile;
 	}
+	body::before {
+		height: vars.$header-height-mobile;
+	}
+	
 	.header {
 		padding-inline: vars.$padding-page-mobile;
 	}

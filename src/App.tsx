@@ -15,9 +15,7 @@ function App() {
 		<BrowserRouter>
 			<Header />
 			<main>
-				<div className='absolute z-[-1] top-0 right-0 h-full w-full overflow-hidden md:p-0'>
 					<BackgroundLines className='w-full h-auto' />
-				</div>
 				<Routes>
 					<Route path='/' element={<HomePage />} />
 					<Route path='/about' element={<About />} />
