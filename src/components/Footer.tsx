@@ -127,7 +127,7 @@ const Footer = () => {
 								name='message'
 								placeholder='Your message'
 								type='textarea'
-								classname='[&_textarea]:h-[156px] max-lg:[&_textarea]:h-[80px]'
+								classname='[&_textarea]:h-[156px]'
 								required
 							/>
 							<Button className='primary-button py-5 px-10 w-fit' type='submit'>

@@ -18,6 +18,7 @@ const ProjectCard = (props: IProjectCard) => {
 						className='rounded-[32px] max-lg:w-full object-contain'
 						src={image}
 						alt={title || description || 'project image'}
+						loading='lazy'
 						width={470}
 						height={335}
 					/>

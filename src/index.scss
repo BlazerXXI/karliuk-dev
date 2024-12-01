@@ -33,6 +33,10 @@ li {
 	list-style: none;
 }
 
+html {
+	position: relative;
+}
+
 body {
 	padding-inline: vars.$padding-page;
 	max-width: vars.$mxw-page;
@@ -63,8 +67,20 @@ main {
 .header {
 	padding-inline: vars.$padding-page;
 	max-height: vars.$header-height;
-	background-color: vars.$header-background-color;
 	max-width: vars.$mxw-page;
+}
+
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	height: vars.$header-height;
+	background-color: vars.$header-background-color;
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
 }
 
 .footer {
@@ -285,4 +301,17 @@ main {
 	.btn-hover:active {
 		transform: scale(1);
 	}
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	background-color: vars.$primary-background-color;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: vars.$accent-color;
+}
+
+textarea {
+	resize: none;
 }

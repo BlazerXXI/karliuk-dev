@@ -8,13 +8,16 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Work from './pages/Work'
 import Contact from './pages/Contact'
+import BackgroundLines from './components/icons/BackgroundLines'
 
 function App() {
 	return (
-
 		<BrowserRouter>
 			<Header />
 			<main>
+				<div className='absolute z-[-1] top-0 right-0 h-full w-full overflow-hidden md:p-0'>
+					<BackgroundLines className='w-full h-auto' />
+				</div>
 				<Routes>
 					<Route path='/' element={<HomePage />} />
 					<Route path='/about' element={<About />} />

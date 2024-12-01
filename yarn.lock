@@ -948,11 +948,6 @@
     typescript "4.9.5"
     undici "5.28.4"
 
-"@vercel/speed-insights@^1.0.14":
-  version "1.0.14"
-  resolved "https://registry.yarnpkg.com/@vercel/speed-insights/-/speed-insights-1.0.14.tgz#75a0baa0affa8f4f5d91b6a731fe6a3b4ce07ce3"
-  integrity sha512-env1BkPddz1UaEZwBL4GmfRksMi2LbiYaKuoxMQjfLk83aEh7kkWMukkUhpQVs717NE6nnD+1+KO85GZHOZ4nQ==
-
 "@vercel/static-config@3.0.0":
   version "3.0.0"
   resolved "https://registry.npmjs.org/@vercel/static-config/-/static-config-3.0.0.tgz"
