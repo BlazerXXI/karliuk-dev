@@ -255,6 +255,10 @@ body::before {
 	}
 }
 
+.primary-input {
+	background-color: vars.$primary-input-background-color;
+}
+
 @media (max-width: 1280px) {
 	body {
 		padding-inline: vars.$padding-page-mobile;
