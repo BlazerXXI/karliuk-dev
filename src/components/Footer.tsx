@@ -78,7 +78,7 @@ const Footer = () => {
 								aria-label='Visit my GitHub profile'
 								className='btn-hover'
 							>
-								<SocialLink classname='w-[32px] h-auto' linkedinPrimary />
+								<SocialLink classname='w-[32px] h-auto' githubPrimary />
 							</a>
 							<a
 								href={'https://www.linkedin.com/in/blazerxxi'}
@@ -87,7 +87,7 @@ const Footer = () => {
 								aria-label='Visit my LinkedIn profile'
 								className='btn-hover'
 							>
-								<SocialLink classname='w-[32px] h-auto' githubPrimary />
+								<SocialLink classname='w-[32px] h-auto' linkedinPrimary />
 							</a>
 						</div>
 					</div>
