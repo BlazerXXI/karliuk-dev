@@ -9,13 +9,24 @@ import Footer from './components/Footer'
 import Work from './pages/Work'
 import Contact from './pages/Contact'
 import BackgroundLines from './components/icons/BackgroundLines'
+import MobileMenu from './components/MobileMenu'
+import React from 'react'
 
 function App() {
+	const [isBurgerOpen, setIsBurgerOpen] = React.useState(false)
+	const handleBurgerClick = () => {
+		setIsBurgerOpen(!isBurgerOpen)
+	}
+
 	return (
 		<BrowserRouter>
-			<Header />
+			<Header
+				isBurgerOpen={isBurgerOpen}
+				handleBurgerClick={handleBurgerClick}
+			/>
+			<MobileMenu handleBurgerClick={handleBurgerClick} isOpen={isBurgerOpen} />
 			<main>
-					<BackgroundLines className='w-full h-auto' />
+				<BackgroundLines className='w-full h-auto animate-pulse' />
 				<Routes>
 					<Route path='/' element={<HomePage />} />
 					<Route path='/about' element={<About />} />

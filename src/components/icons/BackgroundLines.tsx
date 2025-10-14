@@ -10,7 +10,7 @@ const BackgroundLines = (props: IBackgroundLines) => {
 	return (
 		<div className='absolute z-[-1] top-0 right-0 h-auto max-h-full w-full overflow-hidden md:p-0'>
 			<svg
-				className={cx('background-lines min-w-[500px] max-w-[1440px] m-auto', className)}
+				className={cx('background-lines min-w-[500px] m-auto', className)}
 				viewBox='0 0 1440 2394'
 				fill='none'
 				xmlns='http://www.w3.org/2000/svg'
