@@ -46,7 +46,7 @@ body {
 
 main {
 	margin-top: vars.$header-height;
-	flex: 1;
+	// flex: 1;
 	> section {
 		padding-block: vars.$padding-block;
 		position: relative;

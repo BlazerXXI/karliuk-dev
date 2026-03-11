@@ -23,7 +23,7 @@ const NavigationLinks = (props: INavigationLinks) => {
 			>
 				Main page
 			</Link>
-			<Link
+			{/* <Link
 				onClick={ClickOnLink}
 				to='/work'
 				className={cx({ active: location.pathname === '/work' })}
@@ -36,7 +36,7 @@ const NavigationLinks = (props: INavigationLinks) => {
 				className={cx({ active: location.pathname === '/about' })}
 			>
 				About
-			</Link>
+			</Link> */}
 			<Link
 				onClick={ClickOnLink}
 				to='/contact'
