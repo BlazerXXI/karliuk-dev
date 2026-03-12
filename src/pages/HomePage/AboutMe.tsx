@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import DownloadIcon from 'src/components/icons/Download'
 import SocialLink from 'src/components/icons/SocialLink'
 import { IAboutMeProps } from 'src/types'
