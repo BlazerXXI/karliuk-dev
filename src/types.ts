@@ -67,3 +67,7 @@ export interface IMobileMenu {
 export interface IHeaderProps extends IBurgerProps {
 	className?: string
 }
+
+export interface IAboutMeProps {
+	buttons?: boolean
+}

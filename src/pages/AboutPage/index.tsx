@@ -1,7 +1,10 @@
+import AboutMe from "../HomePage/AboutMe";
+
 const About = () => {
 	return (
 		<div>
-			<h3 className="page-title">About</h3>
+			<h3 className="page-title hidden">About</h3>
+			<AboutMe buttons />
 		</div>
 	);
 };
