@@ -47,21 +47,21 @@ body {
 main {
 	margin-top: vars.$header-height;
 	// flex: 1;
-	> section {
-		padding-block: vars.$padding-block;
-		position: relative;
-	}
-	> section:after {
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		content: '';
-		display: block;
-		height: 1px;
-		width: 100%;
-		background-color: vars.$primary-border-color;
-	}
+}
+section.section {
+	padding-block: vars.$padding-block;
+	position: relative;
+}
+section.section:after {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	content: '';
+	display: block;
+	height: 1px;
+	width: 100%;
+	background-color: vars.$primary-border-color;
 }
 
 .header {
@@ -131,6 +131,15 @@ body::before {
 	font-family: vars.$Bebas;
 	font-weight: 400;
 	font-size: 101px;
+	line-height: 0.9;
+	color: vars.$primary-text-color;
+	text-transform: uppercase;
+}
+
+.section-title {
+	font-family: vars.$Bebas;
+	font-weight: 200;
+	font-size: 75px;
 	line-height: 0.9;
 	color: vars.$primary-text-color;
 	text-transform: uppercase;
@@ -266,7 +275,7 @@ body::before {
 	body::before {
 		height: vars.$header-height-mobile;
 	}
-	
+
 	.header {
 		padding-inline: vars.$padding-page-mobile;
 	}

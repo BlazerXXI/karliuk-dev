@@ -41,6 +41,17 @@ export interface IContactData {
 	message: string
 }
 
+export interface ISection {
+	title: string
+	paragraph?: string
+	children: React.ReactNode
+	childrenContainerClass?: string
+	classname?: string
+	titleClass?: string
+	titleContainerClass?: string
+	pageTitle?: boolean
+}
+
 export interface IBurgerProps {
 	isBurgerOpen: boolean
 	handleBurgerClick: () => void
